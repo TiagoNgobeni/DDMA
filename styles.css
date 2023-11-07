@@ -28,6 +28,7 @@ body {
     color: var(--text-color);
     background: var(--bg-color);
 }
+
 header {
     position: fixed;
     top: 0;
@@ -94,6 +95,7 @@ section {
 }
 .right-image img {
     width: 500px;
+    max-width: 280px;
     height: 500px;
 }
 .hero-text h1 {
@@ -130,7 +132,7 @@ section {
 }
 header.sticky {
     padding: 5px 5%;
-    background: var(--other-color);
+    background:#1c75bc;
     border-bottom: 1px solid #4e5055;
 }
 .about {
@@ -187,7 +189,7 @@ header.sticky {
 }
 .service-item {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(230px, auto));
     align-items: center;
     gap: 2.2rem;
     text-align: center;
@@ -337,12 +339,19 @@ header.sticky {
 @media (max-width:1600px) {
     header {
         padding: 14px 4%;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        padding-right: 0;
     }
     header.sticky {
         padding: 8px 4%;
     }
     section {
         padding: 100px 5% 80px;
+    }
+    html {
+        width: 100%;
     }
 }
 @media (max-width:1200px) {
@@ -374,7 +383,7 @@ header.sticky {
         width: 600px;
         height: auto;
     }
-    .service-item {
+    .service-box {
         grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     }
     .contact {
@@ -390,7 +399,7 @@ header.sticky {
     }
     .navlist {
         position: absolute;
-        top: -800px;
+        top: -700px;
         right: 0;
         left: 0;
         display: flex;
@@ -428,13 +437,14 @@ header.sticky {
         padding: 10px 35px;
     }
     .left-contact {
-        gap: 3rem;
+        gap: 1rem;
+        max-width: 320px;
     }
     .in i {
-        font-size: 80px;
+        font-size: 40px;
     }
     .in h4 {
-        font-size: 20px;
+        font-size: 10px;
     }
 }
 @media (max-width:460px) {

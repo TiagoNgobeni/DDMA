@@ -36,3 +36,6 @@ function initMap() {
         center: location
     });
 }
+function portfolio() {
+    alert("This section is still under construction");
+}
