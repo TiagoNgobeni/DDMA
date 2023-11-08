@@ -4,9 +4,9 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: 'Cedarville Cursive', cursive;
   
-  font-family: 'Dosis', sans-serif;
-  
+  font-family: 'Inter', sans-serif;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -26,7 +26,7 @@
 html,
 body {
   height: 100vh;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Dosis', sans-serif;
   --gmpx-font-family-base: "Roboto", sans-serif;
   --gmpx-font-family-headings: "Roboto", sans-serif;
   --gmpx-color-primary: #1967d2;
@@ -51,6 +51,7 @@ header {
 }
 .navlist {
   display: flex;
+  align-items: center;
 }
 
 .navlist a {
@@ -58,7 +59,6 @@ header {
   font-size: var(--p-font);
   font-weight: 600;
   margin:  0 40px;
-  padding: 10px;
   transition: all ease .40s;
 }
 

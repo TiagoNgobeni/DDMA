@@ -29,6 +29,6 @@ window.onscroll = () => {
 // sr.reveal('.right-contact', {origin: 'right'});
 // sr.reveal('.end-section', {origin: 'top'});
 
-function underDevelopment() {
+function underDev() {
     alert("This section is still under construction!");
 }
