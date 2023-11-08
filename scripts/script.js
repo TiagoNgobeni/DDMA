@@ -29,10 +29,6 @@ window.onscroll = () => {
 // sr.reveal('.right-contact', {origin: 'right'});
 // sr.reveal('.end-section', {origin: 'top'});
 
-function portfolio() {
+function underDevelopment() {
     alert("This section is still under construction!");
-}
-
-function myProjects() {
-    alert("This section is still under construction!")
 }
