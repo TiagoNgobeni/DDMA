@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="location.css" rel="stylesheet">
+    <script>
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Phiri Street","address1":"Phiri St","address2":"Meadowlands East Zone 4, Meadowlands East, 1852, South Africa","coords":{"lat":-26.227207302856193,"lng":27.893147635581958},"placeId":"EkdQaGlyaSBTdCwgTWVhZG93bGFuZHMgRWFzdCBab25lIDQsIE1lYWRvd2xhbmRzIEVhc3QsIDE4NTIsIFNvdXRoIEFmcmljYSIuKiwKFAoSCW83msvNoJUeEbQZCCDnc2N8EhQKEgkTZsJhzKCVHhEIVBTCbymMig"}
+        ],
+        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "AIzaSyC8bBj6WZHpUf_nNisU6Jb0lnZ7FZYQlZ4",
+        "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+      };
+
+    </script>
+    <script src="scripts/location.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <h3>Tiago Ngobeni</h3>
+            </a>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navlist">
+            <li>
+                <a href="../index.html" id="home-link">Home</a>
+            </li>
+            <li>
+                <a href="../index.html">About</a>
+            </li>
+            <li>
+                <a href="../index.html">Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick="portfolio()">Portfolio</a>
+            </li>
+            <li>
+                <a href="../index.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- Uses the Extended Component Library (https://github.com/googlemaps/extended-component-library)
+         to configure Google Maps Platform APIs. -->
+    <gmpx-api-loader key="AIzaSyC8bBj6WZHpUf_nNisU6Jb0lnZ7FZYQlZ4" solution-channel="GMP_QB_locatorplus_v8_c"></gmpx-api-loader>
+
+    <gmpx-split-layout>
+      <div id="locations-panel" slot="fixed">
+        <div id="locations-panel-list">
+          <div class="section-name" id="location-results-section-name">
+            All locations
+          </div>
+          <div class="results">
+            <ul id="location-results-list"></ul>
+          </div>
+        </div>
+      </div>
+      <gmp-map slot="main" id="main-map"></gmp-map>
+    </gmpx-split-layout>
+
+    <template id="locator-result-item-template">
+      <li>
+        <gmpx-place-data-provider auto-fetch-disabled>
+          <div class="result-item">
+            <button class="select-location">
+              <h2 class="name">
+                <gmpx-place-field-text field="displayName"></gmpx-place-field-text>
+              </h2>
+            </button>
+            <div class="address"></div>
+            <div class="actions"></div>
+            <gmpx-place-directions-button condensed></gmpx-place-directions-button>
+          </div>
+        </gmpx-place-data-provider>
+      </li>
+    </template>
+  </body>
+</html>

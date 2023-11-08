@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- CSS File Link -->
     <link rel="stylesheet" href="styles.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwSoQcP9Lf2Z2JBq_4Y36SbpRSE-1PGqc&&callback=initMap"></script>
     <!-- Google Fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +25,7 @@
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navlist">
             <li>
-                <a href="#home">Home</a>
+                <a href="#home" id="home-link">Home</a>
             </li>
             <li>
                 <a href="#about">About</a>
@@ -46,7 +47,7 @@
             <h3>Hello! I'm</h3>
             <h1>Tiago <br> Ngobeni</h1>
             <h4>Web Developer - UI/UX Desiner - Marketing</h4>
-            <a href="#" class="btn">My Project's</a>
+            <a href="#" class="btn" onclick="myProjects()">My Project's</a>
         </div>
         <div class="right-image">
             <img src="Langing-page-Images/Right-image.webp" alt="Icon" class="rightImage">
@@ -72,7 +73,7 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, repellat.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, consequuntur.
             </p>
-            <a href="#" class="btn">Hire Me</a>
+            <a href="#" class="btn" onclick="myProjects()">Hire Me</a>
         </div>
     </section>
         <!-- Service Section -->
@@ -111,27 +112,16 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="left-contact">
-            <!-- Remove For API -->
-            <div id="map"></div>
-            <div class="in">
-                <i class='bx bxl-behance' ></i>
-                <h4>Behance</h4>
+            <div id="map">
+                <h1>Please click below for my location</h1>
+                <a href="Google Maps/location.html">
+                    <i class='bx bxs-map'></i>
+                </a>
             </div>
-
-            <div class="in">
-                <i class='bx bxl-dribbble' ></i>
-                <h4>Dribble</h4>
-            </div>
-
-            <div class="in">
-                <i class='bx bxl-upwork' ></i>
-                <h4>Upwork</h4>
-            </div>
-            <!-- Remove For API -->
         </div>
         <div class="right-contact">
             <h2>Profiles</h2>
-            <a href="#contact">Hire Me</a>
+            <a href="#contact" onclick="myProjects()">Hire Me</a>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Architecto sed molestiae delectus veritatis, ullam velit 
@@ -160,5 +150,6 @@
     <!-- Scroll Reveal -->
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="scripts/script.js"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwSoQcP9Lf2Z2JBq_4Y36SbpRSE-1PGqc&&callback=initMap"></script> -->
 </body>
 </html>

@@ -55,14 +55,20 @@ header {
     font-size: var(--p-font);
     font-weight: 600;
     margin:  0 40px;
+    text-align: center;
     padding: 10px;
     transition: all ease .40s;
 }
 .navlist a:hover {
     color: var(--main-color);
-    background: var(--text-color);
-    border-radius: 20px;
+    border-bottom: 5px solid var(--text-color);
     transition: all ease 0.10s;
+}
+#home-link {
+    color: var(--main-color);
+    border-bottom: 5px solid var(--text-color);
+    padding-bottom: 2px solid var(--main-color);
+    /* border-radius: 10px; */
 }
 #menu-icon {
     font-size: 42px;
@@ -95,8 +101,9 @@ section {
 }
 .right-image img {
     width: 500px;
-    max-width: 280px;
-    height: 500px;
+    /* min-height: 500px; */
+    /* max-width: 280px; */
+    height: auto;
 }
 .hero-text h1 {
     font-family: 'Dosis', sans-serif;
@@ -247,20 +254,23 @@ header.sticky {
     gap: 5rem;
 }
 .left-contact {
-    display: flex;
+    /* display: flex; */
+    width: 300px;
     align-items: center;
     text-align: center;
     gap: 4rem;
 }
-/* REMOVE FOR API */
-.in i{
+#map i{
     color: var(--main-color);
     opacity: 0.5;
     font-size: 120px;
     margin-bottom: 15px;
     transition: all ease .40s;
 }
-/* REMOVE FOR API */
+#map i:hover {
+    transform: translateY(15px);
+    color: var(--second-color);
+}
 .right-contact h2 {
     font-family: 'Dosis', sans-serif;
     font-size: var(--h2-font);
@@ -349,9 +359,6 @@ header.sticky {
     }
     section {
         padding: 100px 5% 80px;
-    }
-    html {
-        width: 100%;
     }
 }
 @media (max-width:1200px) {
@@ -455,5 +462,8 @@ header.sticky {
     .hero-text h4 {
         font-size: 16px;
         word-spacing: 7px;
+    }
+    .right-image img {
+        width: 280px;
     }
 }
