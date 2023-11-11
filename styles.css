@@ -61,6 +61,7 @@ header {
 }
 .navlist a:hover {
     color: var(--main-color);
+    border-top: 5px solid var(--text-color);
     border-bottom: 5px solid var(--text-color);
     transition: all ease 0.10s;
 }

@@ -157,3 +157,15 @@ gmpx-split-layout {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 1440px) {
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
