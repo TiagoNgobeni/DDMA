@@ -39,7 +39,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 28px 3%;
+    /* padding: 28px; */
     border-bottom: 1px solid transparent;
     transition: all ease .50s;
 }
@@ -255,7 +255,6 @@ header.sticky {
     gap: 5rem;
 }
 .left-contact {
-    /* display: flex; */
     width: 300px;
     align-items: center;
     text-align: center;
@@ -367,7 +366,12 @@ header.sticky {
         min-height: 90vh;
         grid-template-columns: 1fr;
         margin-top: 100px;
+        align-items: center;
         text-align: center;
+    }
+    ul {
+        width: 90%;
+        margin: auto;
     }
     .navlist {
         margin: 0 20px;
@@ -415,7 +419,7 @@ header.sticky {
         background: #1c75bc;
         border-radius: 55px;
         padding: 20px 0;
-        text-align: left;
+        text-align: center;
         transition: all .50s ease;
     }
     .navlist a {
@@ -466,5 +470,14 @@ header.sticky {
     }
     .right-image img {
         width: 280px;
+    }
+}
+@media (max-width: 280px) {
+    header {
+        width: 80%;
+        margin: auto;
+        left: 0;
+        font-size: 10px;
+        justify-content: space-between;
     }
 }

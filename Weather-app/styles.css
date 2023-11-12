@@ -81,6 +81,8 @@ header {
 }
 
 .container {
+    max-width: 90%;
+    margin: auto;
     height: 300px;
     text-align: center;
     background-color: #ad9b9b;
@@ -124,7 +126,7 @@ header {
     }
     .hero {
         align-items: center;
-        width: 60%;
+        width: 100%;
         margin: auto;
     }
     .container {
@@ -156,13 +158,11 @@ header {
     .container {
         height: auto;
         width: 100%;
-        margin: auto;
     }
 }
 @media (max-width: 280px) {
     .hero {
-        margin: auto;
-        width: 90%;
+        width: 100%;
     }
     .container {
         width: 100%;
