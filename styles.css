@@ -24,6 +24,9 @@
     --h2-font: 3.5rem;
     --p-font: 1.1rem;
 }
+html {
+    min-width: 280px;
+}
 body {
     color: var(--text-color);
     background: var(--bg-color);
@@ -35,6 +38,7 @@ header {
     right: 0;
     z-index: 1000;
     width: 100%;
+    min-width: 280px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -356,6 +360,7 @@ header.sticky {
     }
     header.sticky {
         padding: 8px 4%;
+        align-items: center;
     }
     section {
         padding: 100px 5% 80px;
@@ -383,6 +388,9 @@ header.sticky {
     }
 }
 @media (max-width:1060px) {
+    header {
+        gap: 20%;
+    }
     .about {
         grid-template-columns: 1fr;
     }
@@ -474,10 +482,7 @@ header.sticky {
 }
 @media (max-width: 280px) {
     header {
-        width: 80%;
-        margin: auto;
-        left: 0;
+        width: 280px;
         font-size: 10px;
-        justify-content: space-between;
     }
 }
