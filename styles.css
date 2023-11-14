@@ -368,7 +368,7 @@ header.sticky {
 }
 @media (max-width:1200px) {
     .home {
-        min-height: 90vh;
+        min-height: 100vh;
         grid-template-columns: 1fr;
         margin-top: 100px;
         align-items: center;
@@ -441,7 +441,7 @@ header.sticky {
 }
 @media (max-width:660px) {
     .home {
-        min-height: 80vh;
+        min-height: 90vh;
     }
     :root {
         --h1-font: 3.8rem;
