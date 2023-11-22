@@ -354,12 +354,15 @@ header.sticky {
     header {
         padding: 14px 4%;
         width: 100%;
-        margin: auto;
+        margin: 0;
         align-items: center;
         padding-right: 0;
     }
     header.sticky {
         padding: 8px 4%;
+        left: 0;
+        margin: 0;
+        right: 0;
         align-items: center;
     }
     section {
@@ -408,6 +411,7 @@ header.sticky {
     }
     .contact {
         grid-template-columns: 1fr;
+        padding-right: 0;
     }
     .left-contact {
         margin: auto;
@@ -479,10 +483,28 @@ header.sticky {
     .right-image img {
         width: 280px;
     }
+    #right-contact {
+        min-width: 280px;
+    }
 }
 @media (max-width: 280px) {
     header {
         width: 280px;
         font-size: 10px;
+        left: 0;
+        right: 0;
+    }
+    .right-contact {
+        width: 280px;
+        left: 0;
+        right: 0;
+    }
+    .right-contact-p {
+        text-align: left;
+    }
+    #map {
+        width: 280px;
+        left: 0;
+        right: 0;
     }
 }
